@@ -259,6 +259,8 @@ def remove_traits(slots, traits):
 	for slot in slots:
 		if "combinations" in slot:
 			nr = slot["nr"]
+			if debug:
+				print("Checking slot %d" % (nr))
 			combinations = slot["combinations"]
 			newcombinations = [ ]
 			for entry in combinations:
@@ -266,16 +268,23 @@ def remove_traits(slots, traits):
 					combi = entry["reducedcombi"]
 				else:
 					combi = entry["combi"]
+				if debug:
+					print("Checking %s" % (combi))
 				found = True
+				missingtraits = [ ]
 				for trait in combi[1:]:
 					if trait in traits:
-						found = True
+						if debug:
+							print("trait %s found in %s." % (trait, traits))
 					else:
+						if debug:
+							print("trait %s not found in %s." % (trait, traits))
 						found = False
+						missingtraits.append(trait)
 				if found:
 					newcombinations.append(entry)
 				else:
-					print("slot %d: Removing %s" % (nr, combi))
+					print("slot %d: Removing %s, because %s are missing." % (nr, combi, missingtraits))
 			slot["combinations"] = newcombinations
 	print("")
 
