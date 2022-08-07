@@ -15,13 +15,14 @@ Only one crew with a selected trait combination has to be tested. When this
 does not work a crew with a different trait combination needs to be tested.
 "desc\_id" select the difficulty level, 4 is brutal.
 
-| desc\_id | Difficulty Level
-|        1 | Easy
-|        2 | Normal
-|        3 | Hard
-|        4 | Brutal
-|        5 | Nightmare
-|        6 | Ultra Nightmare
+|desc\_id|Difficulty Level |
+|--------|-----------------|
+|      1 | Easy            |
+|      2 | Normal          |
+|      3 | Hard            |
+|      4 | Brutal          |
+|      5 | Nightmare       |
+|      6 | Ultra Nightmare |
 
 ## Tested crew
 When you tested crew, you can tell the script with the parameter "-s" that a
