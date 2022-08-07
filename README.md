@@ -24,6 +24,11 @@ does not work a crew with a different trait combination needs to be tested.
 |      5 | Nightmare       |
 |      6 | Ultra Nightmare |
 
+## Reducing slots
+The script tries to find slots where all posisble combinations uses the same
+trait. The script will remove that trait and check if there are less
+combinations left. The script will print the reduced list also.
+
 ## Tested crew
 When you tested crew, you can tell the script with the parameter "-s" that a
 crew was tested and not working. For example:
