@@ -187,7 +187,7 @@ def main(argv):
 												print(combi)
 												names = []
 												for crew in foundlist:
-													names.append(crew['name'])
+													names.append("%d* %s" % (crew['max_rarity'], crew['name']))
 												print(names)
 												print("")
 								nr = nr + 1
@@ -303,7 +303,7 @@ def print_slots(slots):
 				print(combi)
 				names = []
 				for crew in foundlist:
-					names.append(crew['name'])
+					names.append("%d* %s" % (crew['max_rarity'], crew['name']))
 				print(names)
 				print("")
 
